@@ -1,9 +1,15 @@
 name: 'Terraform'
 
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
+    # Pattern matched against refs/tags
+    tags:        
+      - 'v*.*.*'  
 
 permissions:
   contents: read
